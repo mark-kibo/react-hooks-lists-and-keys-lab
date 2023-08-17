@@ -4,7 +4,9 @@ function NavBar() {
   const links = ["home", "about", "projects"];
 
   const linksMap=links.map((link)=>{
-    return <a key={link} href={link}>{link}</a>;
+    console.log(link)
+    let newLink = `#${link}`
+    return <a key={link} href={newLink}>{link}</a>;
   })
 
   return <nav>{linksMap}</nav>;
